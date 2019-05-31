@@ -58,9 +58,7 @@ container.onclick = (event) => {
   let leftNumber = 0;
   let rightNumber = 0;
   let result = 0;
-  if (input.innerHTML == 0) {
-    input.innerHTML = '';
-  }
+
   if (event.target.innerHTML == "C") {
     input.textContent = 0;
     output.textContent = 0;
@@ -98,6 +96,9 @@ container.onclick = (event) => {
     }
     output.textContent = operand.pop();
   } else {
+    if (input.innerHTML == 0) {
+      input.innerHTML = '';
+    }
     input.textContent += event.target.innerHTML;
   }
 }
